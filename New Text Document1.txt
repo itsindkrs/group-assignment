@@ -1,0 +1,93 @@
+public class SuperDepartment {
+  main(String[]){
+    public String departmentName() {
+        return "Super Department";
+    }
+
+    public String getTodaysWork() {
+        return "No Work as of now";
+    }
+
+    public String getWorkDeadline() {
+        return "Nil";
+    }
+
+    public String isTodayAHoliday() {
+        return "Today is not a holiday";
+    }
+}
+}
+class AdminDepartment extends SuperDepartment {
+    public String departmentName() {
+        return "Admin Department";
+    }
+
+    public String getTodaysWork() {
+        return "Complete your documents submission";
+    }
+
+    public String getWorkDeadline() {
+        return "Complete by EOD";
+    }
+}
+
+class HrDepartment extends SuperDepartment {
+    public String departmentName() {
+        return "HR Department";
+    }
+
+    public String getTodaysWork() {
+        return "Fill today’s timesheet and mark your attendance";
+    }
+
+    public String getWorkDeadline() {
+        return "Complete by EOD";
+    }
+
+    public String doActivity() {
+        return "team Lunch";
+    }
+}
+
+class TechDepartment extends SuperDepartment {
+    public String departmentName() {
+        return "Tech Department";
+    }
+
+    public String getTodaysWork() {
+        return "Complete coding of Module 1";
+    }
+
+    public String getWorkDeadline() {
+        return "Complete by EOD";
+    }
+
+    public String getTechStackInformation() {
+        return "Core Java";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        AdminDepartment adminDept = new AdminDepartment();
+        System.out.println("Welcome to " + adminDept.departmentName());
+        System.out.println(adminDept.getTodaysWork());
+        System.out.println(adminDept.getWorkDeadline());
+        System.out.println(adminDept.isTodayAHoliday());
+        System.out.println();
+
+        HrDepartment hrDept = new HrDepartment();
+        System.out.println("Welcome to " + hrDept.departmentName());
+        System.out.println(hrDept.doActivity());
+        System.out.println(hrDept.getTodaysWork());
+        System.out.println(hrDept.getWorkDeadline());
+        System.out.println(hrDept.isTodayAHoliday());
+        System.out.println();
+
+        TechDepartment techDept = new TechDepartment();
+        System.out.println("Welcome to " + techDept.departmentName());
+        System.out.println(techDept.getTodaysWork());
+        System.out.println(techDept.getWorkDeadline());
+        System.out.println(techDept.getTechStackInformation());
+        System.out.println(techDept.isTodayAHoliday());
+    }
+}
